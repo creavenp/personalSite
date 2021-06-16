@@ -1,0 +1,148 @@
+.landing-body{
+    height: 100vh;
+    background-image: url("../../images/moon.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+#slide-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+#welcome {
+    font-size: 500%;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    margin-top: -1%;
+}
+
+#name {
+    font-size: 500%;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 4%;
+    /* margin-right: -200%; */
+    color: #fff;
+}
+
+#pic{
+    position: absolute;
+    box-sizing: border-box;
+    background-image: url("../../images/waves.jpg");
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    margin-top: -50px;
+    margin-left: -100px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#sun {
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    margin-top: -50px;
+    margin-left: -100px;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    animation: spin-right 15s linear infinite;
+}
+
+@keyframes spin-right {
+    100% {transform: rotate(360deg);}
+}
+
+#sun2 {
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    margin-top: -50px;
+    margin-left: -100px;
+    border-radius: 50%;
+    background-color: transparent;
+    animation: spin-left 25s linear infinite;
+}
+
+@keyframes spin-right {
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes spin-left {
+    100% {transform: rotate(360deg);}
+}
+
+#earth {
+    background-image: url('../../images/GitHub_logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-color: white;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -50px;
+    margin-left: -60px;
+    animation: spin-left 30s linear infinite;
+}
+
+#mars {
+    background-image: url('../../images/linkedin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    background-position: center center;
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: -130px;
+    margin-left: -120px;
+    animation: spin-left 60s linear infinite;
+}
+
+#sun:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+#sun2:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+#sun:hover #welcome{
+    animation: slide-in-right 1s linear forwards;
+}
+
+#sun:hover #name {
+    animation: slide-in-left 1s linear forwards;
+}
+
+@keyframes slide-in-right {
+    100% {
+        transform: translateX(200%);
+    }
+}
+
+/*
+@keyframes slide-in-left {
+    100% {
+        transform: translateX(200%);
+    }
+} */
